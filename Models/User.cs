@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace demoapiweb.Models;
+
+public partial class User
+{
+    public int Id { get; set; }
+
+    public string? Firstname { get; set; }
+
+    public string? Lastname { get; set; }
+
+    public string Phone { get; set; } = null!;
+
+    public int CompanyId { get; set; }
+
+    public string Email { get; set; } = null!;
+
+    public string? TimeZone { get; set; }
+
+    public DateTime? CreatedAt { get; set; }
+
+    public DateTime? Updated { get; set; }
+
+    public string? CreatedBy { get; set; }
+
+    public string? UpdateBy { get; set; }
+
+    public virtual Company Company { get; set; } = null!;
+}
